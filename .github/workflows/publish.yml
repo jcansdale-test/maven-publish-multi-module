@@ -70,9 +70,6 @@ jobs:
       - name: Build package
         run: mvn package --no-transfer-progress
 
-      - name: Run package
-        run: java -cp target/${{ env.ARTIFACT_ID }}-${{ env.VERSION }}.jar ${{ env.GROUP_ID }}.${{ env.CLASS_NAME }}
-
       - name: Deploy package
         run: mvn deploy -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/${{ github.repository }} --no-transfer-progress
         env:
