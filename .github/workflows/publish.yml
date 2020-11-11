@@ -30,6 +30,9 @@ jobs:
             <groupId>${{ env.GROUP_ID }}</groupId>
             <artifactId>${{ env.ARTIFACT_ID }}</artifactId>
             <version>${{ env.VERSION }}</version>
+            <modules>
+              <module>child</module>
+            </modules>
           </project>
           EOM
 
