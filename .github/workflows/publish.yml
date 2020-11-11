@@ -53,7 +53,7 @@ jobs:
 
       - name: Add ${{ env.CLASS_NAME }}.java file
         run: |
-          SOURCE_DIR=src/main/java/$(echo ${{ env.GROUP_ID }} | tr . /)
+          SOURCE_DIR=child/src/main/java/$(echo ${{ env.GROUP_ID }} | tr . /)
           mkdir -p $SOURCE_DIR
           SOURCE_PATH=$SOURCE_DIR/${{ env.CLASS_NAME }}.java
           cat <<- END > $SOURCE_PATH
